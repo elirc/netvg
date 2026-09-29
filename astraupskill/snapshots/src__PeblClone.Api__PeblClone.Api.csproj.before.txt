@@ -1,0 +1,7 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" />
+    <ProjectReference Include="..\PeblClone.Application\PeblClone.Application.csproj" />
+    <ProjectReference Include="..\PeblClone.Infrastructure\PeblClone.Infrastructure.csproj" />
+  </ItemGroup>
+</Project>

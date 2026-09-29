@@ -1,0 +1,20 @@
+{
+  "project": "_Organized Desktop/01 Net Workspaces/.netvg",
+  "id": "9e7b2d32e0fb",
+  "command": [
+    "node",
+    "C:/Program Files/nodejs/node_modules/npm/bin/npm-cli.js",
+    "run",
+    "build"
+  ],
+  "cwd": "C:\\Users\\Owner\\Desktop\\AstraOrganized2\\astra-remaining-improvements\\stage\\9e7b2d32e0fb\\src\\PeblClone.Web",
+  "environmentOverrides": {},
+  "startedAt": "2026-09-12T22:31:43.765416+00:00",
+  "status": "complete",
+  "log": "root-web-build-03.log",
+  "pid": 12908,
+  "exitCode": 0,
+  "passed": true,
+  "finishedAt": "2026-09-12T22:34:04.741223+00:00",
+  "elapsedSeconds": 140.97
+}

@@ -1,0 +1,27 @@
+{
+  "project": "_Organized Desktop/01 Net Workspaces/.netvg",
+  "id": "9e7b2d32e0fb",
+  "command": [
+    "C:/Program Files/dotnet/dotnet.exe",
+    "test",
+    "tests/PeblClone.Application.Tests/PeblClone.Application.Tests.csproj",
+    "--configuration",
+    "Release",
+    "--no-restore",
+    "--logger",
+    "trx;LogFileName=root-tests-02.trx",
+    "--disable-build-servers"
+  ],
+  "cwd": "C:\\Users\\Owner\\Desktop\\AstraOrganized2\\astra-remaining-improvements\\stage\\9e7b2d32e0fb",
+  "environmentOverrides": {
+    "DOTNET_ROLL_FORWARD": "Major"
+  },
+  "startedAt": "2026-09-12T22:40:48.091031+00:00",
+  "status": "complete",
+  "log": "root-dotnet-test-02.log",
+  "pid": 23064,
+  "exitCode": 0,
+  "passed": true,
+  "finishedAt": "2026-09-12T22:43:37.165709+00:00",
+  "elapsedSeconds": 169.07
+}

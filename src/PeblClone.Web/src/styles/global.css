@@ -1,0 +1,441 @@
+:root {
+  color: #14211c;
+  background: #f5f8f6;
+  font-family:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+button {
+  border: 0;
+  border-radius: 8px;
+  background: #0f6b4f;
+  color: #ffffff;
+  cursor: pointer;
+  font-weight: 700;
+  padding: 0.8rem 1rem;
+}
+
+button:disabled {
+  cursor: wait;
+  opacity: 0.65;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th,
+td {
+  border-bottom: 1px solid #d9e4dd;
+  padding: 1rem;
+  text-align: left;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+th {
+  color: #63766e;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+}
+
+td span,
+td small {
+  color: #63766e;
+  display: block;
+  margin-top: 0.2rem;
+}
+
+.app-shell {
+  display: grid;
+  grid-template-columns: 264px minmax(0, 1fr);
+  min-height: 100vh;
+}
+
+.sidebar {
+  background: #102019;
+  color: #f8fbf9;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1.4rem;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
+
+.brand {
+  align-items: center;
+  display: flex;
+  gap: 0.8rem;
+}
+
+.brand-mark {
+  align-items: center;
+  background: #a8f0c6;
+  border-radius: 8px;
+  color: #102019;
+  display: inline-flex;
+  font-weight: 900;
+  height: 42px;
+  justify-content: center;
+  width: 42px;
+}
+
+.brand small,
+.sidebar-footer span {
+  color: #b9c9c1;
+  display: block;
+}
+
+.sidebar nav {
+  display: grid;
+  gap: 0.4rem;
+}
+
+.sidebar a {
+  border-radius: 8px;
+  color: #dce8e2;
+  font-weight: 700;
+  padding: 0.8rem;
+  text-decoration: none;
+}
+
+.sidebar a.active,
+.sidebar a:hover {
+  background: #20352b;
+  color: #ffffff;
+}
+
+.sidebar-footer {
+  border-top: 1px solid #2a4136;
+  display: grid;
+  gap: 0.6rem;
+  margin-top: auto;
+  padding-top: 1rem;
+}
+
+.workspace {
+  display: grid;
+  gap: 1.2rem;
+  padding: 1.4rem;
+}
+
+.topbar {
+  align-items: center;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.topbar h1,
+.panel h2 {
+  margin: 0;
+}
+
+.topbar h1 {
+  font-size: clamp(1.8rem, 3vw, 3rem);
+  max-width: 760px;
+}
+
+.eyebrow {
+  color: #0f6b4f;
+  font-size: 0.76rem;
+  font-weight: 900;
+  margin: 0 0 0.3rem;
+  text-transform: uppercase;
+}
+
+.metrics-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.metric-card,
+.panel,
+.country-card {
+  background: #ffffff;
+  border: 1px solid #d9e4dd;
+  border-radius: 8px;
+}
+
+.metric-card {
+  display: grid;
+  gap: 0.35rem;
+  padding: 1rem;
+}
+
+.metric-card span,
+.metric-card small {
+  color: #63766e;
+}
+
+.metric-card strong {
+  font-size: 1.7rem;
+}
+
+.content-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: minmax(0, 1.45fr) minmax(320px, 0.75fr);
+}
+
+.span-2 {
+  grid-column: span 2;
+}
+
+.panel {
+  min-width: 0;
+  padding: 1rem;
+}
+
+.panel-heading {
+  align-items: center;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.secondary-button {
+  background: #e8f3ed;
+  color: #0f6b4f;
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+.status {
+  border-radius: 999px;
+  display: inline-flex;
+  font-size: 0.76rem;
+  font-weight: 800;
+  padding: 0.32rem 0.58rem;
+}
+
+.status-active,
+.status-approved,
+.status-api,
+.status-low {
+  background: #dff8e9;
+  color: #0f6b4f;
+}
+
+.status-onboarding,
+.status-pending,
+.status-medium,
+.status-mock {
+  background: #fff4ce;
+  color: #765500;
+}
+
+.status-needsattention,
+.status-high {
+  background: #ffe4df;
+  color: #9b2d18;
+}
+
+.progress {
+  background: #e8f0eb;
+  border-radius: 999px;
+  height: 8px;
+  min-width: 110px;
+  overflow: hidden;
+}
+
+.progress span {
+  background: #0f6b4f;
+  display: block;
+  height: 100%;
+}
+
+.alert-list,
+.payroll-list,
+.quote-form,
+.quote-result,
+.quote-result dl {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.alert-item,
+.payroll-list article {
+  border: 1px solid #d9e4dd;
+  border-radius: 8px;
+  display: grid;
+  gap: 0.45rem;
+  padding: 0.85rem;
+}
+
+.alert-item span:last-child,
+.payroll-list span,
+.empty-state {
+  color: #63766e;
+}
+
+.country-grid {
+  display: grid;
+  gap: 0.8rem;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.country-card {
+  display: grid;
+  gap: 0.6rem;
+  padding: 0.85rem;
+}
+
+.country-card span,
+.country-card small {
+  color: #63766e;
+}
+
+.country-card b {
+  color: #0f6b4f;
+  font-size: 1.35rem;
+}
+
+.pill-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.pill-row span {
+  background: #edf6f1;
+  border-radius: 999px;
+  color: #275543;
+  font-size: 0.76rem;
+  font-weight: 800;
+  padding: 0.28rem 0.5rem;
+}
+
+.payroll-list article {
+  align-items: center;
+  grid-template-columns: minmax(0, 1fr) auto;
+}
+
+.payroll-list article > div:last-child {
+  align-items: end;
+  display: grid;
+  gap: 0.45rem;
+  justify-items: end;
+}
+
+.quote-form label {
+  color: #63766e;
+  display: grid;
+  font-weight: 800;
+  gap: 0.4rem;
+}
+
+.quote-form input,
+.quote-form select {
+  border: 1px solid #c9d8d0;
+  border-radius: 8px;
+  color: #14211c;
+  padding: 0.75rem;
+}
+
+.quote-result {
+  background: #f0faf4;
+  border: 1px solid #cbe9d7;
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.quote-result strong {
+  display: block;
+  font-size: 1.6rem;
+}
+
+.quote-result dl {
+  margin: 0;
+}
+
+.quote-result dl div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.quote-result dt {
+  color: #63766e;
+}
+
+.quote-result dd {
+  font-weight: 800;
+  margin: 0;
+}
+
+.loading-screen {
+  align-self: center;
+  color: #63766e;
+  justify-self: center;
+}
+
+@media (max-width: 1100px) {
+  .metrics-grid,
+  .country-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .span-2 {
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 760px) {
+  .app-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    height: auto;
+    position: static;
+  }
+
+  .sidebar nav {
+    grid-template-columns: repeat(5, max-content);
+    overflow-x: auto;
+  }
+
+  .topbar {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .metrics-grid,
+  .country-grid {
+    grid-template-columns: 1fr;
+  }
+}

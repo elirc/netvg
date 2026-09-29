@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "total": 17,
+  "tests": 17,
+  "failed": 0,
+  "checks": [
+    "root-restore-01",
+    "root-dotnet-test-02",
+    "root-request-tests-01",
+    "root-web-build-03",
+    "root-api-build-02"
+  ],
+  "scope": "14 application xUnit cases (13 calculator and one dashboard), three actual RequestGate Node cases using deferred promises; API Release and web builds passed. No mounted React or HTTP integration test."
+}

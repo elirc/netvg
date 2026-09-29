@@ -1,0 +1,42 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4BA76D1}") = "PeblClone.Api", "src\PeblClone.Api\PeblClone.Api.csproj", "{0F63E35F-5B0E-474A-92BE-0E2A78058F02}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4BA76D1}") = "PeblClone.Application", "src\PeblClone.Application\PeblClone.Application.csproj", "{4ED0E4E9-3951-41A9-B611-6E4F49B94A23}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4BA76D1}") = "PeblClone.Domain", "src\PeblClone.Domain\PeblClone.Domain.csproj", "{F33EE77A-B342-4EAF-8D2B-CA798836906A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4BA76D1}") = "PeblClone.Infrastructure", "src\PeblClone.Infrastructure\PeblClone.Infrastructure.csproj", "{56E4279D-4B5F-43A5-9E3F-25F5E9AA14D8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4BA76D1}") = "PeblClone.Application.Tests", "tests\PeblClone.Application.Tests\PeblClone.Application.Tests.csproj", "{F48E5602-E98D-471B-B54B-3E12909036AF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0F63E35F-5B0E-474A-92BE-0E2A78058F02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F63E35F-5B0E-474A-92BE-0E2A78058F02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F63E35F-5B0E-474A-92BE-0E2A78058F02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F63E35F-5B0E-474A-92BE-0E2A78058F02}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4ED0E4E9-3951-41A9-B611-6E4F49B94A23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4ED0E4E9-3951-41A9-B611-6E4F49B94A23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4ED0E4E9-3951-41A9-B611-6E4F49B94A23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4ED0E4E9-3951-41A9-B611-6E4F49B94A23}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F33EE77A-B342-4EAF-8D2B-CA798836906A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F33EE77A-B342-4EAF-8D2B-CA798836906A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F33EE77A-B342-4EAF-8D2B-CA798836906A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F33EE77A-B342-4EAF-8D2B-CA798836906A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56E4279D-4B5F-43A5-9E3F-25F5E9AA14D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56E4279D-4B5F-43A5-9E3F-25F5E9AA14D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56E4279D-4B5F-43A5-9E3F-25F5E9AA14D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56E4279D-4B5F-43A5-9E3F-25F5E9AA14D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F48E5602-E98D-471B-B54B-3E12909036AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F48E5602-E98D-471B-B54B-3E12909036AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F48E5602-E98D-471B-B54B-3E12909036AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F48E5602-E98D-471B-B54B-3E12909036AF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

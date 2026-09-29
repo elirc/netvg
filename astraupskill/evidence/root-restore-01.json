@@ -1,0 +1,20 @@
+{
+  "project": "_Organized Desktop/01 Net Workspaces/.netvg",
+  "id": "9e7b2d32e0fb",
+  "command": [
+    "C:/Program Files/dotnet/dotnet.exe",
+    "restore",
+    "tests/PeblClone.Application.Tests/PeblClone.Application.Tests.csproj",
+    "--disable-parallel"
+  ],
+  "cwd": "C:\\Users\\Owner\\Desktop\\AstraOrganized2\\astra-remaining-improvements\\stage\\9e7b2d32e0fb",
+  "environmentOverrides": {},
+  "startedAt": "2026-09-12T22:37:29.336517+00:00",
+  "status": "complete",
+  "log": "root-restore-01.log",
+  "pid": 39804,
+  "exitCode": 0,
+  "passed": true,
+  "finishedAt": "2026-09-12T22:38:36.509830+00:00",
+  "elapsedSeconds": 67.17
+}

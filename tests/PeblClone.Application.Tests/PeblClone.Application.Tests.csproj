@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="FluentAssertions" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" />
+    <PackageReference Include="xunit" />
+    <PackageReference Include="xunit.runner.visualstudio" />
+    <ProjectReference Include="..\..\src\PeblClone.Application\PeblClone.Application.csproj" />
+    <ProjectReference Include="..\..\src\PeblClone.Infrastructure\PeblClone.Infrastructure.csproj" />
+  </ItemGroup>
+</Project>

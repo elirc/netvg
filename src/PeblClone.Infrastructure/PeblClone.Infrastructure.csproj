@@ -1,0 +1,7 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" />
+    <ProjectReference Include="..\PeblClone.Application\PeblClone.Application.csproj" />
+    <ProjectReference Include="..\PeblClone.Domain\PeblClone.Domain.csproj" />
+  </ItemGroup>
+</Project>

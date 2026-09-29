@@ -1,0 +1,20 @@
+{
+  "project": "_Organized Desktop/01 Net Workspaces/.netvg",
+  "id": "9e7b2d32e0fb",
+  "command": [
+    "node",
+    "--experimental-strip-types",
+    "--test",
+    "tests/request-gate.test.mjs"
+  ],
+  "cwd": "C:\\Users\\Owner\\Desktop\\AstraOrganized2\\astra-remaining-improvements\\stage\\9e7b2d32e0fb\\src\\PeblClone.Web",
+  "environmentOverrides": {},
+  "startedAt": "2026-09-12T22:31:31.157908+00:00",
+  "status": "complete",
+  "log": "root-request-tests-01.log",
+  "pid": 15208,
+  "exitCode": 0,
+  "passed": true,
+  "finishedAt": "2026-09-12T22:31:36.780097+00:00",
+  "elapsedSeconds": 5.62
+}
