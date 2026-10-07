@@ -1,6 +1,6 @@
 # 4. Test the real boundaries
 
-The calculator tests use the real `HiringQuoteCalculator` and `InMemoryWorkforceReadModel`. Their placement is [`tests/PeblClone.Application.Tests/HiringQuoteCalculatorTests.cs`](../tests/PeblClone.Application.Tests/HiringQuoteCalculatorTests.cs), in the `PeblClone.Application.Tests` namespace. The complete fixture currently contains the following imports and cases; keep them in that file and class so names, packages, and placement match the project:
+The calculator tests use the real `HiringQuoteCalculator` and `InMemoryWorkforceReadModel`. Their placement is [`tests/PeblClone.Application.Tests/HiringQuoteCalculatorTests.cs`](../tests/PeblClone.Application.Tests/HiringQuoteCalculatorTests.cs), in the `PeblClone.Application.Tests` namespace. The listing below is the fixture **as delivered** (13 cases). Since then, two methods have been added to the real file between `CalculateAsync_NormalizesCodesAndRoundsAwayFromZero` and `CalculateAsync_ReturnsIndependentRequirementsCopy`: `CalculateAsync_RoundsEmployerCostsAwayFromZeroAtAnExactMidpoint`, a three-row `[Theory]`, and `CalculateAsync_RejectsCompensationAboveTheDemoCap`. Open the file for those two (note added 2026-10-06). Keep new tests in the same file and class, so that names, packages and placement match the project:
 
 ```csharp
 using FluentAssertions;

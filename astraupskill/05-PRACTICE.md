@@ -29,7 +29,21 @@ Write or extend these before you call the task done:
 
 ## Exercise 5a (code): make a normalizer test fail first
 
-`CalculateAsync_NormalizesCodesAndRoundsAwayFromZero` passes `" de "` and `" eur "`. Add a case that passes lowercase-without-spaces (`"de"`, `"eur"`) and assert the normalized output. Then delete `.ToUpperInvariant()` from the `currency` line in `HiringQuoteCalculator.cs`, run the focused test, and record *which* assertion fails and what the message says. Restore the code. The point: a test that only asserts `IsSuccess` would have stayed green through that deletion.
+`CalculateAsync_NormalizesCodesAndRoundsAwayFromZero` passes `" de "` and `" eur "`. Make two deletions on a scratch branch, one at a time. Restore the code after each.
+
+1. Delete `.ToUpperInvariant()` from the **`currency`** line (`HiringQuoteCalculator.cs:18`). Before running anything, write down which assertion in the normalization test fails first. Look at the guard on line 25 before you decide.
+2. Delete `.ToUpperInvariant()` from the **`countryCode`** line (line 17) instead. Predict how many of the 18 tests go red.
+
+**Goal:** discover which normalization step is load-bearing and which one is redundant today.
+
+**Check:**
+
+```powershell
+dotnet test tests/PeblClone.Application.Tests/PeblClone.Application.Tests.csproj -c Release --filter FullyQualifiedName~Normalizes
+dotnet test tests/PeblClone.Application.Tests/PeblClone.Application.Tests.csproj -c Release
+```
+
+Compare the failing assertion name and the red/green count with your two predictions. Then write one sentence explaining any prediction that was wrong.
 
 ## Exercise 5b (code): prove the rounding mode matters
 
@@ -48,7 +62,9 @@ and compare the reported actual value with your prediction. Restore the argument
 1. Copy `snapshots/HiringQuoteCalculator-before.cs.txt` over `src/PeblClone.Application/Workforce/HiringQuoteCalculator.cs` and `snapshots/QuoteBuilder-before.tsx.txt` over `src/PeblClone.Web/src/features/QuoteBuilder.tsx`.
 2. Predict, in writing, which of the C# tests go red and why.
 3. Run `dotnet test tests/PeblClone.Application.Tests/PeblClone.Application.Tests.csproj -c Release` and record every failing test name and message.
-4. Read `snapshots/QuoteBuilder-before.tsx.txt` and find the line that manufactures a quote from mock data after a failed request. Write down what a user in Japan saw.
+4. Read `snapshots/workforceApi-before.ts.txt` and find the `catch` in `createQuote` that manufactures a quote from mock data after a failed request. The quote is manufactured in the API helper, not in `QuoteBuilder`. Then read `snapshots/QuoteBuilder-before.tsx.txt`: its `try`/`finally` has no `catch` and no request gate. Write down what a user in Japan saw.
 5. Restore both delivered files, re-run to green, and write one sentence per failure naming the line of the repair that fixed it.
 
 **Exercise 5.** Write pseudocode for the state timeline when a user submits `DE`, immediately edits the country to `JP`, then retries as `JP` Contractor. Include every gate that prevents the first response from changing the second attempt. State what the user sees during the edit and after the rejected retry.
+
+**Exercise 6.** (This prompt previously appeared only at the bottom of the answer key; it moved here on 2026-10-06.) Review two paths in the current source and say, for each one, what is delivered behavior and what is a future extension. (a) Suppose the read model held two profiles with `IsoCode` `"DE"`. What does the lookup at `HiringQuoteCalculator.cs:41-42` do, and what HTTP response would a caller get? (b) Follow the `CancellationToken` passed to `CalculateAsync`. Which line observes it? Name the test or startup invariant you would add before changing either behavior.

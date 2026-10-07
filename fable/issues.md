@@ -1,6 +1,24 @@
 # Issues
 
-Concrete defects, ordered by severity. Line references are to the current state of `main`.
+Concrete defects, ordered by severity. Line references are to the state of `main` on the review date (2026-07-01).
+
+> **Status re-checked 2026-10-06 against the published `main`.** The published history is a single commit, so the reviewed 2026-07-01 tree cannot be checked out. Each row below was re-read in today's source. The findings themselves are left as written.
+>
+> | # | Status today | Evidence |
+> |---|---|---|
+> | I-1 | **Open** | `PeblClone.sln:5,7,9,…` still use `{9A19103F-16F7-4668-BE54-9A1E7A4BA76D1}`. The course's verification commands target the `.csproj` files directly; `ci.yml` still restores `PeblClone.sln`. |
+> | I-2 | **Fixed** | `workforceApi.ts` is now 49 lines. `createQuote` (lines 44-49) has no fallback, and `request` (lines 15-25) throws the ProblemDetails `detail`. Only `getDashboard` still falls back to the mock. |
+> | I-3 | **Open** | `formatters.ts:9-14` still formats `new Date(value)` with no `timeZone`. |
+> | I-4 | **Open** | `WorkforceDashboardService.cs:25` still sums `MonthlyCost.Amount`. |
+> | I-5 | **Partly fixed** | `HiringQuoteCalculator.cs:25-28` now rejects anything that is not three letters A–Z, but `"FOO"` is still accepted, and the response still echoes the currency (line 108). The browser always sends `'USD'` (`QuoteBuilder.tsx:34`). The first calculator test still asserts `12_799m` for an `"EUR"` request. |
+> | I-6 | **Fixed** | `QuoteBuilder.tsx:37-40` catches the error and stores it in `error` state, behind a `RequestGate` currency check. |
+> | I-7 | **Open** | There is no `eslint.config.*` under `src/PeblClone.Web`, and CI still runs only `npm ci` and `npm run build`. |
+> | I-8 | **Open** | `Program.cs:26` registers `AddProblemDetails()`, but there is still no `UseExceptionHandler()`. |
+> | I-9 | **Open** | `InMemoryWorkforceReadModel.cs:8` still has `static readonly DateOnly Today`. |
+> | I-10 | **Open** | `Money.cs:9` still uses `OrdinalIgnoreCase`, and the record does not normalize the currency. |
+> | I-11 | **Open** | `Program.cs:38` still calls `UseHttpsRedirection()`, and `launchSettings.json` lists only `http://localhost:5088`. |
+>
+> Data nits: `mockDashboard.ts:8` still says `openComplianceItems: 5` and lists three alerts.
 
 ---
 

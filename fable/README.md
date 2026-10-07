@@ -17,6 +17,8 @@ That said, the review found **one build-blocking defect** (a malformed project-t
 
 ## Findings at a glance
 
+Status on 2026-10-06: I-2 and I-6 are fixed, I-5 is partly fixed, and the rest are still open. Evidence is in the status table at the top of [issues.md](issues.md).
+
 | # | Severity | Finding |
 |---|---|---|
 | I-1 | Blocker | Invalid project-type GUID in `PeblClone.sln` — solution fails to parse |

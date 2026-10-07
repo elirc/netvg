@@ -2,6 +2,11 @@
 
 Not bugs — design and quality changes that would make the codebase stronger, especially given its teaching intent. Ordered roughly by value.
 
+> **Status re-checked 2026-10-06 (the proposals below are left as written on 2026-07-01).**
+> - **P-2 is partly done.** The frontend copy of the pricing math is gone (`workforceApi.ts` has no quote fallback). The rates and fees still exist in `HiringQuoteCalculator.cs:59-79`, and the expected totals are still hard-coded in the tests.
+> - **P-5 is partly done.** Quote errors now surface the ProblemDetails `detail`. `getDashboard` still falls back to the mock on *any* error, and there is no timeout or retry.
+> - **P-8 is partly done.** "Two happy-ish path tests" is now 18 xUnit cases: `HiringQuoteCalculatorTests` has 17, covering invalid enum, nonpositive and over-cap compensation, midpoint rounding, currency and country syntax. `WorkforceDashboardServiceTests` has 1. There are also 3 `node:test` cases for `requestGate.ts`. Still untested: unsupported country, EOR-unavailable, `Worker.OnboardingProgress`, alert ordering, and `formatters.ts`.
+> - **Still open as written:** P-1, P-3 (`WorkforceDashboardService.cs:9-11` still awaits sequentially), P-4 (`Result.cs` unchanged), P-6 (`QuoteBuilder.tsx` still offers all three engagement types), P-7 (`StatusBadge.tsx` still has its own `humanize`), P-9, and P-10. The root `README.md` still contains the "This machine does not currently have the .NET SDK" sentence.
 ---
 
 ## P-1 — Decouple application tests from Infrastructure seed data
